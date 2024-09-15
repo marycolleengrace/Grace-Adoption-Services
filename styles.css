@@ -61,11 +61,14 @@ ul li {
 /* Text Links */
 a {
     color: #004d99;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
     color: #0073e6;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Images */
