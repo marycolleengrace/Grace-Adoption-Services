@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #004d99;
+    background-color: #abcbeb;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -48,7 +48,13 @@ footer {
 footer p {
     margin: 0;
 }
-
+.logo {
+    width:60px;  
+    height: 50px;  
+    max-width: 100%;  
+    display: block;
+    margin: 0 auto;  
+}
 /* Lists */
 ul {
     list-style-type: square;
@@ -135,26 +141,50 @@ ul {
     padding: 0;
 }
 
+ul#photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    padding: 0;
+}
+
 li.photo {
     position: relative;
     display: inline-block;
     margin: 10px;
+    overflow: hidden; 
+    text-align: center; 
 }
 
-.caption {
+.photo img {
+    width: 200px;  
+    height: 200px; 
+    object-fit: cover;  
     display: block;
-    text-align: center;
-    font-weight: bold;
+    margin: 0 auto;  
+    border-radius: 8px; 
 }
+
+
+.caption {
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
 
 .description {
     position: absolute;
-    left: 0;
-    bottom: -20px;
-    visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    visibility: hidden; 
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 5px;
     border-radius: 5px;
+    width: 80%; 
+    text-align: center;
 }
 
 .photo:hover .description {
@@ -164,3 +194,4 @@ li.photo {
 .photo:hover {
     cursor: pointer;
 }
+
