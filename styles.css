@@ -195,3 +195,25 @@ li.photo {
     cursor: pointer;
 }
 
+#info-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    visibility: hidden; /* Hidden by default */
+    z-index: 10; /* Make sure it floats above the gallery */
+}
+
+#close-info-box {
+    color: rgb(138, 205, 236);
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+

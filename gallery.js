@@ -57,3 +57,34 @@ for (let i = 0; i < photos.length; i++) {
 
     photoGallery.appendChild(listItem);
 }
+
+const additionalInfo = [
+    'Max is playful and loves the outdoors.',
+    'Bella is a cuddle bug and very affectionate.',
+    'Luna is active and enjoys long walks.',
+    'Charlie loves belly rubs and is very friendly.',
+    'Daisy is full of energy and loves to play fetch.',
+    'Buddy is young and curious, always exploring.',
+    'Rocky is a loyal protector of his family.',
+    'Sadie loves playing in the park with other dogs.',
+    'Milo is calm and enjoys the company of other pets.',
+    'Coco is adventurous and always on the go.'
+];
+
+const infoBox = document.getElementById('info-box');
+const infoHeading = document.getElementById('info-heading');
+const infoText = document.getElementById('info-text');
+const closeLink = document.getElementById('close-info-box');
+
+document.querySelectorAll('.description').forEach((desc, index) => {
+    desc.addEventListener('click', function() {
+        infoHeading.innerHTML = captionTexts[index]; 
+        infoText.innerHTML = additionalInfo[index];  
+        infoBox.style.visibility = 'visible'; 
+    });
+});
+
+closeLink.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    infoBox.style.visibility = 'hidden'; 
+});
