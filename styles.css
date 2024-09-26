@@ -207,8 +207,15 @@ li.photo {
     border-radius: 10px;
     text-align: center;
     visibility: hidden; /* Hidden by default */
-    z-index: 10; /* Make sure it floats above the gallery */
+    z-index: 10; /* Make it float above the gallery */
 }
+
+#info-heading {
+    color: lightblue; 
+    font-size: 20px;  
+    font-weight: bold; 
+}
+
 
 #close-info-box {
     color: rgb(138, 205, 236);
