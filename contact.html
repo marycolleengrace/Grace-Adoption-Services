@@ -26,8 +26,27 @@
             <label for="full-name">Full Name:</label>
             <input type="text" id="full-name" name="full-name" required><br><br>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <!--<label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>-->
+
+            <label for="contact-method">Preferred Contact Method:</label><br>
+            <select id="contact-method">
+                <option value="">Select One</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+            </select><br><br>
+
+            <!-- Phone input (initially hidden) -->
+            <div id="phone-input" style="display:none;">
+                <label for="phone">Please enter your Phone Number:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+            </div>
+
+            <!-- Email input (if user selects email) -->
+            <div id="email-input" style="display:none;">
+                <label for="email">Please enter Email Address:</label>
+                <input type="email" id="email" name="email"><br><br>
+            </div>
 
             <label for="message">Your Message:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
@@ -40,5 +59,6 @@
     <footer>
         <p>&copy; 2024 Grace Adoption Services</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
