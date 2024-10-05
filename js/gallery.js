@@ -13,6 +13,19 @@ const photos = [
     'images/dog10.jpg'
 ];
 
+const largePhotos = [
+    'images/dog1.jpg',
+    'images/dog2.jpg',
+    'images/dog3.jpg',
+    'images/dog4.jpg',
+    'images/dog5.jpg',
+    'images/dog6.jpg',
+    'images/dog7.jpg',
+    'images/dog8.jpg',
+    'images/dog9.jpg',
+    'images/dog10.jpg'
+];
+
 const captionTexts = [
     'Meet Max, a playful pup!',
     'Bella loves to cuddle!',
@@ -50,13 +63,15 @@ for (let i = 0; i < photos.length; i++) {
     listItem.className = 'photo';
 
     listItem.innerHTML = `
-        <img src="${photos[i]}" alt="Photo ${i + 1}" width="200" height="200">
+        <img src="${photos[i]}" data-large="${largePhotos[i]}" alt="Photo ${i + 1}" width="200" height="200">
         ${openCaptionTag}${captionTexts[i]}${closeCaptionTag}
         ${openDescTag}${descTexts[i]}${closeDescTag}
     `;
 
     photoGallery.appendChild(listItem);
 }
+
+
 
 const additionalInfo = [
     'Max is playful and loves the outdoors.',

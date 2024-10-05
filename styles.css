@@ -227,6 +227,42 @@ li.photo {
 input[type="text"],input[type="email"],input[type="tel"],textarea,select {
     width: 100%; 
     padding: 10px; 
-    box-sizing: border-box; /
+    box-sizing: border-box; 
     font-size: 16px; 
 }
+
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#lightbox .close:hover, #lightbox .close:focus {
+    color: #ddd;
+}
+

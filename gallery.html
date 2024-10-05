@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Grace Adoption Services</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -70,11 +71,16 @@
             </li>
         </ul>-->
     </section>
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
 
     <footer>
         <p>&copy; 2024 Grace Adoption Services</p>
     </footer>
 
     <script src="js/gallery.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
